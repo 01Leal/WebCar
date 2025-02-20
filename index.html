@@ -45,7 +45,7 @@
       <!-- Nome + Ícone WhatsApp -->
       <div class="d-flex align-items-center">
         <p class="mb-0 me-2" style="font-size: 20px;">WebCar Araras</p>
-        <a href="https://wa.me/5519994507870" target="_blank">
+        <a href="" target="_blank">
           <img src="img/whatsapp-icon.png" alt="WhatsApp" width="28" height="28">
         </a>
       </div>
@@ -136,7 +136,7 @@
                 *Aprovação 100%
                 *Aceita carro e moto de menores valores na troca!!!!!</p>
             <p class="card-text">Valor: R$ 21.900,00</p>
-            <a href="https://wa.me/5519994507870" class="btn btn-danger">Comprar</a>
+            <a href="" class="btn btn-danger">Comprar</a>
           </div>
         </div>
       </div>
@@ -215,7 +215,7 @@
                 *Aprovação 100%
                 *Aceita carro e moto de menores valores na troca!!!!!</p>
             <p class="card-text">Valor: R$ 65.000,00</p>
-            <a href="https://wa.me/5519994507870" class="btn btn-danger">Comprar</a>
+            <a href="" class="btn btn-danger">Comprar</a>
           </div>
         </div>
       </div>
@@ -295,7 +295,7 @@
               *Até em 24X no cartão
             </p>
             <p class="card-text">Valor: R$ 52.900,00</p>
-            <a href="https://wa.me/5519994507870" class="btn btn-danger">Comprar</a>
+            <a href="" class="btn btn-danger">Comprar</a>
           </div>
         </div>
       </div>
@@ -362,7 +362,7 @@
               *Cartão de Crédito em até 24x  
             </p>
             <p class="card-text">Valor: R$ 34.900,00</p>
-            <a href="https://wa.me/5519994507870" class="btn btn-danger">Comprar</a>
+            <a href="" class="btn btn-danger">Comprar</a>
           </div>
         </div>
       </div>
@@ -437,7 +437,7 @@
               *Até em 24X no cartão
             </p>
             <p class="card-text">Valor: R$ 33.900,00</p>
-            <a href="https://wa.me/5519994507870" class="btn btn-danger">Comprar</a>
+            <a href="" class="btn btn-danger">Comprar</a>
           </div>
         </div>
       </div>
@@ -501,7 +501,7 @@
               *Aceita carro e moto de menores valores na troca!!!!!  
             </p>
             <p class="card-text">Valor: R$ 53.900,00</p>
-            <a href="https://wa.me/5519994507870" class="btn btn-danger">Comprar</a>
+            <a href="" class="btn btn-danger">Comprar</a>
           </div>
         </div>
       </div>
@@ -571,7 +571,7 @@
               *Aceita carro e moto de menores valores na troca!!!!
             </p>
             <p class="card-text">Valor: R$ 31.900,00</p>
-            <a href="https://wa.me/5519994507870" class="btn btn-danger">Comprar</a>
+            <a href="" class="btn btn-danger">Comprar</a>
           </div>
         </div>
       </div>
@@ -642,7 +642,7 @@
               *Até em 24X no cartão  
             </p>
             <p class="card-text">Valor: R$ 20.900,00</p>
-            <a href="https://wa.me/5519994507870" class="btn btn-danger">Comprar</a>
+            <a href="" class="btn btn-danger">Comprar</a>
           </div>
         </div>
       </div>
@@ -716,7 +716,7 @@
               *Até em 24X no cartão
             </p>
             <p class="card-text">Valor: R$ 60.900,00</p>
-            <a href="https://wa.me/5519994507870" class="btn btn-danger">Comprar</a>
+            <a href="" class="btn btn-danger">Comprar</a>
           </div>
         </div>
       </div>
@@ -773,7 +773,7 @@
               *Cartão de Crédito em até 18 ou 24x
             </p>
             <p class="card-text">Valor: R$ 21.900,00</p>
-            <a href="https://wa.me/5519994507870" class="btn btn-danger">Comprar</a>
+            <a href="" class="btn btn-danger">Comprar</a>
           </div>
         </div>
       </div>
@@ -827,7 +827,7 @@
               *Até em 18X no cartão  
             </p>
             <p class="card-text">Valor: R$ 11.000,00</p>
-            <a href="https://wa.me/5519994507870" class="btn btn-danger">Comprar</a>
+            <a href="" class="btn btn-danger">Comprar</a>
           </div>
         </div>
       </div>
@@ -841,4 +841,15 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+<script>
+  // Adiciona a mensagem personalizada nos links do WhatsApp
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.btn-danger').forEach(button => {
+      const cardTitle = button.closest('.card-body').querySelector('.card-title').textContent;
+      const whatsappNumber = '5519994507870';
+      const message = `Olá, estou interessado no veículo: ${cardTitle.trim()}`;
+      button.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    });
+  });
+</script>
 </html>
